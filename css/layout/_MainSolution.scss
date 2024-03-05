@@ -1,0 +1,159 @@
+.MainSolution {
+    position: relative;
+    background: $background-color;
+
+    padding: 10rem 0 15rem 0;
+
+    li {
+        &.on {
+            button {
+                background: $primary-color;
+            }
+        }
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        z-index: 999;
+
+        display: flex;
+        gap: 4px;
+
+        button {
+            width: 20px;
+            height: 20px;
+            background: $line-color;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .arrows {
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            border: none;
+            color: $light-color;
+
+            background: transparent;
+            cursor: pointer;
+
+
+            span {
+                border: 1rem solid $light-color;
+                background: $body-color;
+                border-radius: 50%;
+                font-size: 4rem;
+                font-variation-settings: 'wght' 100, ;
+            }
+
+
+
+            &.arrow_left {
+                margin: 0 0 0 calc(($default-size/-2));
+            }
+
+            &.arrow_right {
+                margin: 0 0 0 calc(($default-size/2));
+            }
+
+        }
+
+
+    }
+
+    .desc_box {
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        z-index: 999;
+
+        background: $light-color;
+        width: 30rem;
+        height: 45rem;
+
+        border: 1px solid $line-color;
+        box-shadow: 10px 10px 20px rgba($color: $body-color, $alpha: 0.25);
+
+        margin: 0 0 0 calc(($default-size/-2) + 10rem);
+        padding: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 4rem;
+            left: 0;
+
+            width: 4rem;
+            height: 2px;
+            background: $primary-color;
+
+            transform: translate(-50%, 0);
+        }
+
+
+
+        .tit {
+            display: block;
+            margin: 0 0 2.4rem 0;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            font-weight: 600;
+        }
+
+        .desc {
+            line-height: 2.2rem;
+            min-height: 12rem;
+            margin: 0 0 4rem 0;
+        }
+
+        .num {
+            strong {
+                font-size: 2.4rem;
+                color: $primary-color;
+            }
+        }
+
+
+
+        .box {
+            li {
+                display: none;
+
+                &.on {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .tit_wrap {
+        text-align: center;
+    }
+
+    .swiper-slide {
+        width: $default-size;
+        padding: 0 $margin-size;
+        filter: grayscale(1);
+
+        &.on {
+            filter: grayscale(0);
+        }
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

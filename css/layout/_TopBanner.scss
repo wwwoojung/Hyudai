@@ -1,0 +1,86 @@
+.TopBanner {
+    background: $primary-color;
+    height: 16rem;
+    overflow: hidden;
+
+    &.on {
+        height: 0;
+        transition: height 0.4s;
+    }
+
+    .itm01 {
+        a {
+            background-image: url(../images/banner01.jpg);
+        }
+    }
+
+    .itm02 {
+        a {
+            background-image: url(../images/banner02.png);
+        }
+    }
+
+    .itm03 {
+        a {
+            background-image: url(../images/banner03.jpg);
+        }
+    }
+
+    .itm a {
+        display: block;
+        height: 16rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 999;
+
+        display: flex;
+        gap: 8px;
+
+        & li {
+            display: flex;
+            align-items: center;
+            width: 4px;
+            height: 10px;
+
+            a {
+                display: block;
+                width: 4px;
+                height: 5px;
+                background: $light-color;
+                transition: height 0.4s;
+            }
+
+            &.on {
+                a {
+                    height: 10px;
+                }
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        margin-left: $default-size/2;
+        transform: translate(-100%, 0);
+        z-index: 999;
+
+        .icon {
+            color: $light-color;
+            font-size: 3.2rem;
+            font-variation-settings:
+                'wght' 200,
+        }
+    }
+
+
+}

@@ -1,0 +1,165 @@
+.MainVisual {
+    position: relative;
+
+    .MainSlide {
+        .itm {
+            height: calc(100vh - 16rem);
+
+            &.itm01 {
+                background: url(../images/visual01.jpg) no-repeat center center/cover;
+            }
+
+            &.itm02 {
+                background: url(../images/visual02.jpg) no-repeat center center/cover;
+            }
+
+            .slogan {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: $default-size;
+                transform: translate(-50%, -50%);
+                color: $light-color;
+                text-shadow: 0 0 3px #000;
+
+                transition: 0.5s 0.3s;
+
+                strong {
+                    display: block;
+                    margin: 0 0 2rem 0;
+
+                    font-size: 6.4rem;
+                    font-weight: 700;
+                    letter-spacing: -0.025em;
+
+                    transform: translate(0, 10rem);
+                    opacity: 0;
+
+
+                }
+
+                p {
+                    font-size: 2rem;
+
+                    transform: translate(0, 10rem);
+                    opacity: 0;
+                }
+            }
+
+            &.on {
+                .slogan {
+                    strong {
+                        transform: translate(0, 0);
+                        opacity: 1;
+
+                        transition: 0.4s 0.3s;
+                    }
+
+                    p {
+                        transform: translate(0, 0);
+                        opacity: 1;
+                        transition: 0.4s 0.6s;
+                    }
+                }
+            }
+        }
+    }
+
+    .arrows {
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            z-index: 999;
+
+            color: $light-color;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+            opacity: 0.5;
+
+            span {
+                font-size: 8rem;
+                font-variation-settings: 'wght' 100,
+            }
+
+
+
+            &.arrow_left {
+                left: 5rem;
+            }
+
+            &.arrow_right {
+                right: 5rem;
+            }
+
+        }
+
+
+    }
+
+    .right_link {
+        position: absolute;
+        top: 24rem;
+        left: 50%;
+        margin: 0 0 0 $default-size/2;
+        transform: translate(-100%, 0);
+        color: $light-color;
+
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+
+        li {
+            margin: 0 0 1rem 0;
+
+            a {
+                font-size: 0;
+            }
+
+            &.on {
+                a {
+                    font-size: 1.8rem;
+
+                    &::after {
+                        background: $light-color;
+                    }
+                }
+
+            }
+        }
+
+        a {
+            display: block;
+            text-align: right;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $light-color;
+                margin: 0 0 0 1.6rem;
+                vertical-align: -2px;
+            }
+        }
+    }
+
+    .num {
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        margin: 0 0 0 $default-size/-2;
+        z-index: 999;
+
+        color: $light-color;
+
+        strong {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+    }
+
+
+}

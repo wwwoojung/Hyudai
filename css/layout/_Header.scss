@@ -1,0 +1,135 @@
+.Header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .header_wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+
+        padding: 0 8rem;
+        height: 10rem;
+        color: $light-color;
+
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+
+        border-bottom: 1px solid rgba($color: $body-color, $alpha: 0.1);
+
+        .logo {
+            display: block;
+            width: 188px;
+            height: 22px;
+
+            background: url(../images/logo01.png);
+        }
+    }
+
+
+    &.on {
+
+        .header_wrap {
+            height: 8rem;
+            background: rgba(255, 255, 255, 1);
+            color: $body-color;
+
+            .logo {
+                background: url(../images/logo02.png);
+            }
+        }
+
+    }
+
+    h1 {
+        flex: 0 0 calc((100% - $default-size)/2);
+        min-width: 260px;
+    }
+
+    .util {
+        margin: 0 0 0 auto;
+
+        display: flex;
+        gap: 4.8rem;
+
+        .ir {
+            display: flex;
+            gap: 2.4rem;
+
+            li {
+                position: relative;
+            }
+
+            li~li::after {
+                content: "";
+                position: absolute;
+                left: -1.2rem;
+                top: 50%;
+                transform: translate(-1px, -100%);
+
+                width: 1px;
+                height: 10px;
+                background: $gray-color;
+            }
+        }
+
+        .lang {
+            position: relative;
+
+            &>a.on {
+                .arrow {
+                    transform: rotate(180deg);
+                }
+
+                &+ul {
+                    display: block;
+
+                    li {
+                        margin: 0 0 0.2rem 0;
+                    }
+                }
+            }
+
+            ul {
+                position: absolute;
+                top: 4rem;
+                left: 0;
+
+                background: $light-color;
+                color: $body-color;
+                padding: 2.4rem;
+
+                border: 2px solid $primary-color;
+
+                display: none;
+
+                &.on {
+                    display: block;
+                }
+            }
+        }
+
+        .search {
+            font-size: 2.4rem;
+        }
+    }
+
+    .Gnb {
+        line-height: 8rem;
+
+        &>ul {
+            display: flex;
+
+            a {
+                display: block;
+                padding: 0 4rem 0 0;
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

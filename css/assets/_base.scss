@@ -1,0 +1,63 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: $body-color;
+}
+
+.sec {
+    @include section(null);
+    letter-spacing: -0.025em;
+}
+
+.tit_wrap {
+    max-width: $default-size;
+    padding: 0 $margin-size;
+    margin: 0 auto 4.8rem auto;
+
+    h2 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        margin: 0 0 2.4rem 0;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+
+.inner {
+    max-width: $default-size;
+    margin: 0 auto;
+    padding: 0 $margin-size;
+}
+
+.f_inner {
+    max-width: $default-size;
+    margin: 0 auto;
+    padding: 0 $margin-size;
+
+    display: flex;
+
+    &>* {
+        flex: 0 1 auto;
+    }
+}
+
+.a_btn {
+    display: inline-block;
+    padding: 1.4rem 2.4rem;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    font-size: 1.6rem;
+
+    &::after {
+        content: "\e5cc";
+        font-family: "Material Symbols Outlined";
+        vertical-align: -2px;
+        margin: 0 0 0 10px;
+    }
+}

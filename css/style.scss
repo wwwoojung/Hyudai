@@ -1,0 +1,17 @@
+@import './assets/variables';
+@import './assets/mixins';
+@import './assets/base';
+
+@import './layout/TopBanner';
+@import './layout/Header';
+
+@import './layout/Main';
+
+@import './layout/MainVisual';
+@import './layout/MainContent';
+@import './layout/MainPortfolio';
+@import './layout/MainSolution';
+@import './layout/MainPromotion';
+@import './layout/MainNews';
+
+@import './layout/Footer';

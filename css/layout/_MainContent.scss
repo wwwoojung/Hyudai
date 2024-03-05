@@ -1,0 +1,47 @@
+.MainContent {
+    text-align: center;
+
+    .img_wrap {
+        margin: 0 0 4rem 0;
+        overflow: hidden;
+
+        img {
+            transition: 0.4s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .content {
+        strong {
+            position: relative;
+            display: block;
+            margin: 0 0 2.4rem 0;
+            font-size: 2.4rem;
+            font-weight: 600;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -6rem;
+                left: calc(50% - 1px);
+                width: 2px;
+                height: 40px;
+                background: $primary-color;
+            }
+        }
+
+        p {
+            margin: 0 auto 3.2rem auto;
+            max-width: 24rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+
+
+}

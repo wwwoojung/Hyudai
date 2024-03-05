@@ -1,0 +1,48 @@
+.MainNews {
+    .tit_wrap {
+        text-align: center;
+    }
+
+    .content {
+        gap: 2rem;
+
+        &>* {
+            flex: 1 1 0;
+        }
+
+        .img_wrap {
+            margin: 0 0 3.2rem 0;
+        }
+
+        img {
+            height: 30rem;
+            object-fit: cover;
+        }
+
+        figure * {
+            display: block;
+        }
+
+        strong {
+            margin: 0 0 1.8rem 0;
+            color: $primary-color;
+
+        }
+
+        p {
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 3rem;
+            margin: 0 0 1.8rem 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+    }
+}
