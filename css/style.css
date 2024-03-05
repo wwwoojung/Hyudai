@@ -1,0 +1,686 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    /* width: 100%; */
+
+    line-height: 80px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header .header_wrap {
+    display: flex;
+    padding: 0 80px;
+}
+
+.header .header_wrap .gnb {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* absolute로 띄우면 margin을 적용할 수 없으므로 left 위치를 줘서 중간으로 보냄*/
+
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    /* absolute로 띄우면 content 크기만큼 box가 작아지므로 넓이를 주고 100%로 펴줌*/
+}
+
+.header .header_wrap .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header_wrap .gnb>ul>li a {
+    color: #fff;
+}
+
+.header .header_wrap .util {
+    margin: 0 0 0 auto;
+}
+
+.header .header_wrap .util i {
+    color: #fff;
+}
+
+.mainVisual .visual_slide .itm {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+}
+
+.mainVisual .visual_slide .itm .slogan p {
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.mainVisual .visual_slide .itm.on .slogan p {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s;
+}
+
+.mainVisual .visual_slide .itm .slogan span {
+    display: block;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.mainVisual .visual_slide .itm.on .slogan span {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.5s;
+}
+
+.mainVisual .visual_slide .itm01 {
+    background: url(../images/mainVisual01.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .visual_slide .itm02 {
+    background: url(../images/mainVisual02.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .visual_slide .itm .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    width: 100%;
+
+    padding: 0 15px;
+}
+
+.mainVisual .visual_slide .itm .slogan p {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+
+    margin: 0 0 19px 0;
+}
+
+.mainVisual .visual_slide .itm .slogan span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.mainVisual .visual_slide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+    z-index: 999;
+    /* transform: translate(0, -50%); */
+
+    border: none;
+    background: transparent;
+
+    font-size: 0;
+
+    width: 80px;
+    height: 80px;
+    border-top: 4px solid rgba(255, 255, 255, 0.4);
+    border-left: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+.mainVisual .visual_slide .slick-prev {
+    /* margin: 0 0 0 -700px; */
+    left: 80px;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.mainVisual .visual_slide .slick-next {
+    /* margin: 0 0 0 700px; */
+    right: 80px;
+    transform: translate(0, -50%) rotate(135deg);
+}
+
+.mainVisual .right_dots {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-100%, 0);
+
+    margin: 0 0 0 585px;
+}
+
+.mainVisual .right_dots li {
+    text-align: right;
+    margin: 0 0 8px 0;
+}
+
+.mainVisual .right_dots li a {
+    font-size: 0;
+    color: #fff;
+}
+
+.mainVisual .right_dots li.on a {
+    font-size: 16px;
+}
+
+.mainVisual .right_dots li a::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    border: 1px solid #fff;
+    margin: 0 0 0 8px;
+    vertical-align: -3px;
+}
+
+.mainVisual .right_dots li.on a::after {
+    background: #fff;
+}
+
+.mainVisual .num {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    margin: 0 0 0 -585px;
+    color: #fff;
+}
+
+.mainVisual .num span {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.mainVisual .scroll {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    color: #fff;
+    font-size: 12px;
+}
+
+.mainVisual .scroll::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 1px;
+    height: 50px;
+
+    background: #fff;
+}
+
+.mainVisual .scroll::after {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 6px;
+    height: 6px;
+
+    background: #fff;
+    border-radius: 50%;
+
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        /* top: -60px; */
+        transform: translate(-50%, 0);
+
+    }
+
+    100% {
+        /* top: -15px; */
+        transform: translate(-50%, 50px) scale(1.2);
+    }
+}
+
+.mainVisual .play {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    margin: 0 0 0 585px;
+    transform: translate(-100%, 0);
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    color: #fff;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+
+.mainVisual .play::after {
+    content: "\ea3b";
+    font-family: xeicon;
+}
+
+.mainVisual .play.on::after {
+    content: "\ea3e";
+    font-family: xeicon;
+}
+
+.mainContent .title h2 {
+    text-align: center;
+}
+
+.mainContent .title p {
+    text-align: center;
+}
+
+.mainContent .content {
+    display: flex;
+}
+
+.mainContent .content>* {
+    flex: 1;
+    text-align: center;
+}
+
+.mainContent .content figure .img_box {
+    overflow: hidden;
+    margin: 0 0 48px 0;
+}
+
+.mainContent .content figure img {
+    transition: 0.5s;
+}
+
+.mainContent .content figure:hover img {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+.mainContent .content figure strong {
+    position: relative;
+    display: block;
+    margin: 0 0 22px 0;
+
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mainContent .content figure strong::before {
+    content: "";
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 2px;
+    height: 48px;
+    background: #008850;
+}
+
+.mainContent .content figure p {
+    text-align: center;
+    line-height: 20px;
+    margin: 0 0 22px 0;
+}
+
+
+.mainStory .content .story_slide .itm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    transition: 0.2s;
+}
+
+.mainStory .content .itm .case {
+    /* display: flex;
+    gap: 32px;
+    flex-direction: column;
+    justify-content: center; */
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+
+    height: 400px;
+    background: url(../images/mainVisual01.jpg) no-repeat center center/cover;
+    color: #fff;
+    padding: 32px;
+}
+
+.mainStory .content .story_slide {
+    display: flex;
+}
+
+.mainStory .content .story_slide>* {
+    flex: 1;
+}
+
+.mainStory .content .story_slide .itm:hover {
+    flex: 2;
+}
+
+.mainPortfolio {
+    background: url(../images/mainBg.jpg) repeat-x;
+}
+
+.mainPortfolio .portfolio_inner {
+    display: flex;
+    gap: 30px;
+    width: calc((100% - 1200px)/2 + 1200px);
+    margin: 0 0 0 auto;
+    padding: 0 0 0 15px;
+}
+
+.mainPortfolio .portfolio_inner .left {
+    flex: 0 0 450px;
+    min-width: 0;
+}
+
+.mainPortfolio .portfolio_inner .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    order: 2;
+
+    min-width: 0;
+    overflow: hidden;
+}
+
+.mainPortfolio .portfolio_inner .pf_left_slide figure {
+    padding: 0 50px 0 0;
+}
+
+.mainPortfolio .portfolio_inner .pf_left_slide .img_box {
+    box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 0 50px 0;
+}
+
+.mainPortfolio .portfolio_inner .pf_right_slide .img_box {
+    margin: 0 0 50px 0;
+}
+
+.mainPortfolio .portfolio_inner .pf_right_slide figure {
+    margin: 0 30px 0 0;
+}
+
+.mainPortfolio .portfolio_inner .right .slide_box {
+    margin: auto 0 0 0;
+    width: calc(100% + 100px);
+}
+
+.mainPortfolio .title {
+    margin: 0 0 40px 0;
+    padding: 40px 0 0 0;
+    color: #fff;
+}
+
+.mainPortfolio .arrows {
+    display: flex;
+    align-self: flex-start;
+    border: 1px solid #fff;
+}
+
+.mainPortfolio .arrows li~li {
+    border-left: 1px solid #fff;
+}
+
+.mainPortfolio .arrows button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 10px;
+    color: #fff;
+}
+
+.mainSolution {
+    position: relative;
+    background: #f9f9f9;
+
+    padding: 100px 0 140px 0;
+}
+
+.mainSolution .solution_slide figure {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 30px;
+    filter: grayscale(1) opacity(0.5);
+}
+
+.mainSolution .solution_slide figure.slick-current {
+    filter: grayscale(0) opacity(1);
+    transition: 0.5s 0.5s;
+}
+
+.mainSolution .solution_slide img {
+    margin: 0 auto;
+}
+
+.mainSolution .solution_slide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+
+    font-size: 0;
+    width: 80px;
+    height: 40px;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mainSolution .solution_slide .slick-prev {
+    margin: 0 0 0 -600px;
+}
+
+.mainSolution .solution_slide .slick-prev::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: #fff;
+}
+
+.mainSolution .solution_slide .slick-prev::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 20px;
+    width: 14px;
+    height: 1px;
+
+    background: #fff;
+
+    transform: rotate(-45deg);
+    transform-origin: left;
+}
+
+.mainSolution .solution_slide .slick-next {
+    margin: 0 0 0 600px;
+}
+
+.mainSolution .solution_slide .slick-next::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: #fff;
+}
+
+.mainSolution .solution_slide .slick-next::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 20px;
+    width: 14px;
+    height: 1px;
+
+    background: #fff;
+
+    transform: rotate(45deg);
+    transform-origin: right;
+}
+
+.mainSolution .solution_slide .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.mainSolution .solution_slide .slick-dots li {
+    /* slick-dots를 가로배치할 때는 flex가 아닌 display: inline-block 사용
+    slick 라이브러리를 사용할 때는 flex를 사용하지 않는 것이 좋음
+    라이브러리 내에 이미 display: block 이 있기 때문 */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background: #ddd;
+}
+
+.mainSolution .solution_slide .slick-dots li.slick-active {
+    background: #008850;
+}
+
+.mainSolution .solution_slide .slick-dots li button {
+    display: none;
+}
+
+.mainSolution .solution_txt {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+
+    width: 300px;
+    height: 400px;
+
+    background: #fff;
+    margin: 0 0 0 -485px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mainSolution .solution_txt::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -24px;
+
+    width: 48px;
+    height: 2px;
+
+    background: #008850;
+}
+
+.mainSolution .txt_box {
+    padding: 40px;
+}
+
+.mainSolution .txt_box>li {
+    visibility: hidden;
+    height: 0;
+}
+
+.mainSolution .txt_box>li.on {
+    visibility: visible;
+    height: auto;
+}
+
+.mainSolution .txt_box>li h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+}
+
+.mainSolution .txt_box>li p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 32px 0;
+}
+
+.mainSolution .solution_idx {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    margin: 0 0 0 -445px;
+
+    font-size: 20px;
+}
+
+.mainSolution .solution_idx strong {
+    font-size: 32px;
+    font-weight: 600;
+    color: #008850;
+}
+
+.mainPromotion {
+    background: url(../images/mainPromotionBg.jpg) no-repeat left bottom;
+}
+
+.mainPromotion .title {
+    text-align: center;
+}
+
+.mainPromotion .movie_case {
+    width: 800px;
+    height: calc(800px * 9 / 16);
+    background: tomato;
+    margin: 0 auto;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.mainPromotion .movie_case .movie_play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    background: transparent;
+    border: 4px solid #008850;
+    border-radius: 50%;
+
+    padding: 20px 22px;
+
+    font-size: 24px;
+    color: #008850;
+}
+
+.mainPromotion .movie_case .movie_play::before {
+    content: "\ea3e";
+    font-family: xeicon;
+}
+
+.mainPromotion .movie_case .movie_play.on::before {
+    content: "\ea3b";
+    font-family: xeicon;
+}

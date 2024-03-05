@@ -1,0 +1,43 @@
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.default {
+    padding: 100px 0;
+}
+
+.default .title {
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 0 15px;
+}
+
+.default .title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.default .title p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.default_btn {
+    display: inline-block;
+    border: 1px solid #008850;
+    padding: 12px 32px;
+
+    color: #008850;
+    font-size: 14px;
+}
+
+.default_btn::after {
+    content: "\e93e";
+    font-family: xeicon;
+    font-size: 10px;
+    margin: 0 0 0 8px;
+    vertical-align: 1px;
+}
